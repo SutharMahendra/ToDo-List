@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useTodo } from '../context/todoContext';
+import { useTodo } from '../context/TodoContext';
 
 function TodoForm() {
 
@@ -10,7 +10,7 @@ function TodoForm() {
     const handleAddTodo = (e) => {
         e.preventDefault()
         if (todo) {
-            addTask({ todo, commited: false })
+            addTask(todo)
             setTodo("")
         } else {
             return
